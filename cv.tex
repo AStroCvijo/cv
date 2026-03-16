@@ -47,47 +47,23 @@
 \vspace{0.1cm}
 
 \textbf{Interia -- AI-Powered Room Redesign} $|$
-\textit{React, FastAPI, Depth Anything V3, YOLOv8, Google Gemini, Three.js} \hfill \href{https://github.com/deepgrad/epiplar.io}{\textbf{GitHub}}
+\textit{React, TypeScript, Three.js, Sentence Transformers, FastAPI, Vercel} \hfill \href{https://github.com/deepgrad/epiplar.io}{\textbf{GitHub}}
 \begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
-    \item Full-stack application that \textbf{transforms room videos into interactive 3D point clouds} using Depth Anything V3 and camera pose estimation.
-    \item Implemented \textbf{AI furniture detection} with YOLOv8 and \textbf{semantic product search} with sentence transformers.
-    \item Built \textbf{photorealistic furniture replacement} with Google Gemini and \textbf{3D visualization} with Three.js.
+    \item Built the \textbf{React frontend} with interactive 3D point cloud visualization (Three.js), video upload, and real-time furniture replacement previews.
+    \item Developed a \textbf{furniture data pipeline} over a 45,000+ product catalog and implemented \textbf{semantic search (RAG)} using sentence transformers for intelligent product matching.
+    \item Managed \textbf{deployment infrastructure} on Vercel with Docker-based GPU backend.
 \end{itemize}
 
 \vspace{0.1cm}
 
 \textbf{CodeRAG} $|$ \textit{RAG, LangChain, OpenAI, Hugging Face, CLI} \hfill \href{https://github.com/AStroCvijo/coderag}{\textbf{GitHub}}
 \begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
-    \item Created a \textbf{QA system for codebases} with a customizable RAG pipeline supporting top-k retrieval, configurable chunk sizing, and multiple embedding backends (OpenAI, Hugging Face).
-    \item Improved \textbf{Recall@10 from 63.7\% to 88.8\%} through iterative enhancements: LLM-generated code summaries, larger embedding models, enriched metadata (file paths, function/class lists), and chunk size tuning.
-    \item Built a \textbf{full agentic generation graph} on top of retrieval: retrieval grader (filters irrelevant docs), question re-writer (query transformation on retrieval failure), answer generator, hallucination grader, answer grader, and an out-of-scope handler — with conditional edges routing between nodes based on grading outcomes.
-    \item Built a \textbf{CLI and evaluation script}; designed a \textbf{modular architecture} for easy integration of new models and vector stores.
-\end{itemize}
-
-\vspace{-0.4cm}
-
-% ─────────────────────────────────────────────────────────────────
-\section*{Research \& Paper Reproductions}
-
-\textbf{ReAct Reproduction} $|$ \textit{LLM Reasoning, ReAct, CoT} \hfill \href{https://github.com/AStroCvijo/react_reproduction}{\textbf{GitHub}}
-\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
-    \item Reproduced the ICLR 2023 paper \textbf{``ReAct: Synergizing Reasoning and Acting in Language Models''}.
-    \item Implemented \textbf{Standard, CoT, Act, ReAct, and hybrid reasoning methods} across four datasets (FEVER, HotpotQA, ALFWorld, WebShop).
-    \item Validated that ReAct \textbf{outperformed Act on all benchmarks}: HotpotQA (29.4\% vs 28.2\%), FEVER (62.0\% vs 57.5\%), ALFWorld (59\% vs 43\% avg success rate).
+    \item Built a \textbf{RAG-based QA system for codebases} with configurable retrieval (top-k, chunk sizing) and support for multiple embedding backends (OpenAI, Hugging Face).
+    \item Improved \textbf{Recall@10 from 63.7\% to 88.8\%} through LLM-generated code summaries, enriched metadata, and embedding/chunking tuning.
+    \item Implemented an \textbf{agentic generation graph} with retrieval grading, query rewriting on failure, hallucination checking, and out-of-scope handling.
 \end{itemize}
 
 \vspace{0.1cm}
-
-\textbf{Detection of Code Formatting Style} $|$ \textit{PyTorch, Transformer, LSTM, N-grams} \hfill \href{https://github.com/AStroCvijo/detection_of_formatting_style}{\textbf{GitHub}}
-\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
-    \item Reproduced \textbf{``Learning to Format Coq Code Using Language Models''} and extended it with comparative model analysis.
-    \item \textbf{Trained Transformer, LSTM, and n-gram models} to predict code formatting patterns; built a full data preprocessing pipeline for Coq source files.
-\end{itemize}
-
-\vspace{-0.4cm}
-
-% ─────────────────────────────────────────────────────────────────
-\section*{Software Engineering Projects}
 
 \textbf{gviz -- Graph Visualizer} $|$ \textit{Python, Django, D3.js, Plugin Architecture} \hfill \href{https://github.com/AStroCvijo/gviz}{\textbf{GitHub}}
 \begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
@@ -101,25 +77,6 @@
     \item Built a \textbf{full-stack Uber-like ride-sharing application} with real-time vehicle tracking, multi-stop ride booking, and proximity-based driver auto-assignment.
     \item Implemented \textbf{JWT authentication}, role-based access control, and admin approval workflows; developed real-time WebSocket chat, push notifications, and live map tracking.
     \item Built an \textbf{Android companion app} in Java with Material Design 3; wrote \textbf{unit and E2E tests} with JUnit, Jasmine, and Selenium.
-\end{itemize}
-
-\vspace{0.1cm}
-
-\textbf{LangLang -- Language Course Management System} $|$
-\textit{C\#, .NET 8, WPF, SOLID, GitHub Actions} \hfill \href{https://github.com/kzi-nastava/course-project-usi-2025-team-1}{\textbf{GitHub}}
-\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
-    \item Developed a \textbf{desktop application} for managing language courses and exams with role-based access for students, teachers, and directors.
-    \item Designed a \textbf{repository layer with reflection-based JSON/CSV parsing}, replacing manual serialization with generic CRUD interfaces.
-    \item Followed \textbf{SOLID principles, feature-branch workflow}, and PR-based code reviews.
-\end{itemize}
-
-\vspace{0.1cm}
-
-\textbf{NASP Key-Value Engine} $|$ \textit{Go, LSM Tree, Probabilistic Data Structures} \hfill \href{https://github.com/niksacvorovic/nasp-key-value-engine}{\textbf{GitHub}}
-\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
-    \item Developed a \textbf{key-value storage engine} in Go with configurable memtables (B-Tree, SkipList, HashMap), SSTables with compaction, and write-ahead logging.
-    \item Implemented \textbf{Bloom Filters, Merkle Trees, and LRU caching} for efficient reads and data integrity verification.
-    \item Designed a \textbf{CLI interface} and JSON-based configuration system for runtime tuning.
 \end{itemize}
 
 \vspace{-0.4cm}
@@ -165,12 +122,5 @@
 \textbf{National Olympiad in Informatics} (Republic of Srpska) -- \textbf{1\textsuperscript{st} place} \hfill 2022
 
 \textbf{Mathematical Grammar School Cup} (Belgrade) -- \textbf{Bronze Medal} in programming \hfill 2020
-
-\vspace{-0.4cm}
-
-% ─────────────────────────────────────────────────────────────────
-\section*{Languages}
-
-Serbian (native), English (highly proficient)
 
 \end{document}
