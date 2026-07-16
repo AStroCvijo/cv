@@ -1,0 +1,151 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[top=0.4in,bottom=0.4in,left=0.4in,right=0.4in]{geometry}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\raggedright
+\pagestyle{empty}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
+
+\begin{document}
+
+\centerline{\Huge Jovan Cvijanović}
+\vspace{5pt}
+\centerline{%
+  \href{mailto:jovan.cvijanovic2@gmail.com}{jovan.cvijanovic2@gmail.com} $|$
+  \href{https://github.com/AStroCvijo}{GitHub} $|$
+  \href{https://linkedin.com/in/jovancvijanovic}{LinkedIn}%
+}
+\vspace{-7pt}
+
+% ─────────────────────────────────────────────────────────────────
+\section*{Education}
+
+\textbf{\href{http://ftn.uns.ac.rs/691618389/fakultet-tehnickih-nauka}{Faculty of Technical Sciences, University of Novi Sad}} -- Software Engineering \hfill 2023 -- 2027 (expected)
+
+\vspace{0.1cm}
+
+\textbf{Languages:} English (Cambridge C2 Proficiency), Serbian (native)
+
+\vspace{-0.4cm}
+
+% ─────────────────────────────────────────────────────────────────
+\section*{Projects}
+
+\textbf{cyclops -- Monocular Depth Estimation Study} $|$
+\textit{Python, PyTorch, Stable Diffusion, I-JEPA, DepthAnything V2} \hfill \href{https://github.com/AStroCvijo/cyclops}{\textbf{GitHub}}
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Ran a \textbf{comparative study of monocular depth estimation} on NYU Depth V2 across five approaches: a supervised ResNet-50 baseline, frozen \textbf{Stable Diffusion} and \textbf{I-JEPA} features, their fusion, and DepthAnything V2 as a SOTA reference.
+    \item Evaluated \textbf{robustness under degraded inputs} (fog, blur, under-exposure) to measure how each method holds up outside clean conditions.
+    \item Built a \textbf{config-driven experiment pipeline} with W\&B tracking in a 2-person team.
+\end{itemize}
+
+\vspace{0.1cm}
+
+\textbf{RAG Systems -- Research to Deployment (CodeRAG \& Otto RAG)} $|$
+\textit{Python, LangChain, PostgreSQL, pgvector, Ollama, FastAPI, OAuth2} \hfill \href{https://github.com/AStroCvijo/coderag}{\textbf{CodeRAG}} $|$ \href{https://github.com/AStroCvijo/otto_rag}{\textbf{Otto RAG}}
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item \textbf{Research (CodeRAG):} built a RAG QA system for codebases and improved \textbf{Recall@10 from 63.7\% to 88.8\%} through LLM-generated code summaries, enriched metadata, and embedding/chunking experiments.
+    \item \textbf{Deployment (Otto RAG):} productionized those learnings into a \textbf{deployed personal RAG} over Gmail and Google Drive with \textbf{PostgreSQL + pgvector}, local inference via Ollama, per-user data isolation, and an \textbf{OAuth2-authenticated FastAPI} service.
+    \item Implemented a shared \textbf{agentic query pipeline} with query rewriting, document relevance grading, hallucination checking, and out-of-scope handling.
+\end{itemize}
+
+\vspace{0.1cm}
+
+\textbf{Interia -- AI-Powered Room Redesign} $|$
+\textit{React, TypeScript, Three.js, Sentence Transformers, FastAPI, Vercel} \hfill \href{https://github.com/deepgrad/epiplar.io}{\textbf{GitHub}}
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Built the \textbf{React frontend} with interactive 3D point cloud visualization (Three.js), video upload, and real-time furniture replacement previews.
+    \item Developed a \textbf{furniture data pipeline} over a 45,000+ product catalog and implemented \textbf{semantic search (RAG)} using sentence transformers for intelligent product matching.
+    \item Managed \textbf{deployment infrastructure} on Vercel with Docker-based GPU backend.
+\end{itemize}
+
+\vspace{0.1cm}
+
+\textbf{word2vec -- CBOW \& Skip-Gram with Negative Sampling} $|$
+\textit{Python, NumPy} \hfill \href{https://github.com/AStroCvijo/word2vec}{\textbf{GitHub}}
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Implemented \textbf{CBOW and SGNS from scratch in pure NumPy} — no ML frameworks — with full training loop, negative sampling, sub-sampling of frequent words, and learning rate decay.
+    \item Evaluated on \textbf{Google analogy} (19k questions) and \textbf{WordSim-353}; best results: \textbf{44.2\% analogy accuracy} (CBOW) and \textbf{Spearman $\rho$ = 0.731} (SGNS) on text8.
+    \item Built an interactive \textbf{REPL for nearest-neighbour queries and vector arithmetic}, a \textbf{W\&B sweep} for hyperparameter search, pretrained embedding releases, and a \textbf{pytest test suite}.
+\end{itemize}
+
+\vspace{0.1cm}
+
+\textbf{gviz -- Graph Visualizer} $|$ \textit{Python, Django, D3.js, Plugin Architecture} \hfill \href{https://github.com/AStroCvijo/gviz}{\textbf{GitHub}}
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Architected the \textbf{core platform and abstract plugin API} in a 4-person team, defining the interfaces all plugins implement and building the plugin management, workspace, and graph filtering systems.
+    \item Developed the \textbf{first data source plugin} (JSON format with cyclic structure support) and designed the \textbf{complete UI layout} in Django that teammates extended with additional functionality.
+\end{itemize}
+
+\textbf{Lavugio -- Ride-Sharing Platform} $|$
+\textit{Java, Spring Boot, Angular, PostgreSQL, WebSocket, Leaflet, JWT} \hfill \href{https://github.com/kzi-nastava/mrs-team28-Lavugio}{\textbf{GitHub}}
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Developed \textbf{backend services and repositories} in Spring Boot for a full-stack Uber-like application built in a 3-person team.
+    \item Built \textbf{frontend features} in Angular including real-time WebSocket chat, push notifications, and live map tracking with Leaflet.
+    \item Developed the \textbf{Android companion app} in Java with Material Design 3.
+    \item Wrote \textbf{unit and E2E tests} with JUnit, Jasmine, and Selenium.
+\end{itemize}
+
+\vspace{-0.4cm}
+
+% ─────────────────────────────────────────────────────────────────
+\section*{Experience}
+
+\vspace{0.1cm}
+
+\textbf{\href{https://www.microsoft.com/}{Microsoft}} -- Applied Scientist \hfill Belgrade, Serbia (Hybrid) $|$ July 2026 -- Present
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Member of the \textbf{Applied Science team}, working on applied AI research and its deployment into production systems.
+\end{itemize}
+
+\vspace{0.1cm}
+
+\textbf{Freelance C++ Tutor}
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Conducted 1-on-1 lessons in C++ covering core language features, memory management, and object-oriented programming.
+\end{itemize}
+
+\vspace{-0.4cm}
+
+% ─────────────────────────────────────────────────────────────────
+\section*{Non-Industry Relevant Experience}
+
+\textbf{\href{https://www.m2lschool.org/}{Mediterranean ML Summer School 2025}} -- Participant \hfill Split, 08--12 September 2025
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Selected as one of \textbf{300 participants} out of $\sim$1700 applicants.
+\end{itemize}
+
+\vspace{0.1cm}
+
+\textbf{Competitive Programming Task Author} \hfill 2024 -- Present
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Designing algorithmic problems and organizing competitive programming competitions in Bosnia and Herzegovina.
+    \item Built \textbf{Python tooling} for automating task generation, competition management, and report generation.
+    \item Co-authoring a \textbf{training syllabus} covering algorithms and data structures for national-level competitors. \hfill \href{https://github.com/LukaNedimovic/silabus}{\textbf{Link}}
+\end{itemize}
+
+\vspace{-0.4cm}
+
+% ─────────────────────────────────────────────────────────────────
+\section*{Awards}
+
+\textbf{\href{https://hack.garaza.org/}{Garaža Frontier Hackathon}} (Belgrade, Serbia) -- \textbf{1\textsuperscript{st} place, \$10,000 prize} \hfill December 2025
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Won with \textbf{Interia}, an AI-powered room redesign app; 48-hour hackathon with 30+ competing teams.
+    
+\end{itemize}
+
+\textbf{National Olympiad in Informatics} (Republic of Srpska) -- \textbf{1\textsuperscript{st} place} \hfill 2022
+
+\textbf{Mathematical Grammar School Cup} (Belgrade) -- \textbf{Bronze Medal} in programming \hfill 2020
+
+\end{document}
