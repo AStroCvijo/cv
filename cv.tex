@@ -31,27 +31,31 @@
 
 \textbf{\href{http://ftn.uns.ac.rs/691618389/fakultet-tehnickih-nauka}{Faculty of Technical Sciences, University of Novi Sad}} -- Software Engineering \hfill 2023 -- 2027 (expected)
 
+\vspace{0.1cm}
+
+\textbf{Languages:} English (Cambridge C2 Proficiency), Serbian (native)
+
 \vspace{-0.4cm}
 
 % ─────────────────────────────────────────────────────────────────
 \section*{Projects}
 
-\textbf{Otto RAG -- Personal RAG System} $|$
-\textit{Python, PostgreSQL, pgvector, Ollama, FastAPI, OAuth2} \hfill \href{https://github.com/AStroCvijo/otto_rag}{\textbf{GitHub}}
+\textbf{cyclops -- Monocular Depth Estimation Study} $|$
+\textit{Python, PyTorch, Stable Diffusion, I-JEPA, DepthAnything V2} \hfill \href{https://github.com/AStroCvijo/cyclops}{\textbf{GitHub}}
 \begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
-    \item Built a \textbf{personal RAG system} for querying Gmail and Google Drive in natural language, with vector search powered by \textbf{PostgreSQL + pgvector} and fully local inference via Ollama.
-    \item Implemented an \textbf{agentic query pipeline} with query rewriting, document relevance grading, hallucination checking, and out-of-scope handling.
-    \item Developed \textbf{multi-user support} with per-user data isolation, an \textbf{OAuth2-authenticated HTTP API} (FastAPI), and an interactive terminal UI built with Rich.
+    \item Ran a \textbf{comparative study of monocular depth estimation} on NYU Depth V2 across five approaches: a supervised ResNet-50 baseline, frozen \textbf{Stable Diffusion} and \textbf{I-JEPA} features, their fusion, and DepthAnything V2 as a SOTA reference.
+    \item Evaluated \textbf{robustness under degraded inputs} (fog, blur, under-exposure) to measure how each method holds up outside clean conditions.
+    \item Built a \textbf{config-driven experiment pipeline} with W\&B tracking in a 2-person team.
 \end{itemize}
 
 \vspace{0.1cm}
 
-\textbf{word2vec -- CBOW \& Skip-Gram with Negative Sampling} $|$
-\textit{Python, NumPy} \hfill \href{https://github.com/AStroCvijo/word2vec}{\textbf{GitHub}}
+\textbf{RAG Systems -- Research to Deployment (CodeRAG \& Otto RAG)} $|$
+\textit{Python, LangChain, PostgreSQL, pgvector, Ollama, FastAPI, OAuth2} \hfill \href{https://github.com/AStroCvijo/coderag}{\textbf{CodeRAG}} $|$ \href{https://github.com/AStroCvijo/otto_rag}{\textbf{Otto RAG}}
 \begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
-    \item Implemented \textbf{CBOW and SGNS from scratch in pure NumPy} — no ML frameworks — with full training loop, negative sampling, sub-sampling of frequent words, and learning rate decay.
-    \item Evaluated on \textbf{Google analogy} (19k questions) and \textbf{WordSim-353}; best results: \textbf{44.2\% analogy accuracy} (CBOW) and \textbf{Spearman $\rho$ = 0.731} (SGNS) on text8.
-    \item Built an interactive \textbf{REPL for nearest-neighbour queries and vector arithmetic}, a \textbf{W\&B sweep} for hyperparameter search, pretrained embedding releases, and a \textbf{pytest test suite}.
+    \item \textbf{Research (CodeRAG):} built a RAG QA system for codebases and improved \textbf{Recall@10 from 63.7\% to 88.8\%} through LLM-generated code summaries, enriched metadata, and embedding/chunking experiments.
+    \item \textbf{Deployment (Otto RAG):} productionized those learnings into a \textbf{deployed personal RAG} over Gmail and Google Drive with \textbf{PostgreSQL + pgvector}, local inference via Ollama, per-user data isolation, and an \textbf{OAuth2-authenticated FastAPI} service.
+    \item Implemented a shared \textbf{agentic query pipeline} with query rewriting, document relevance grading, hallucination checking, and out-of-scope handling.
 \end{itemize}
 
 \vspace{0.1cm}
@@ -66,11 +70,12 @@
 
 \vspace{0.1cm}
 
-\textbf{CodeRAG} $|$ \textit{RAG, LangChain, OpenAI, Hugging Face, CLI} \hfill \href{https://github.com/AStroCvijo/coderag}{\textbf{GitHub}}
+\textbf{word2vec -- CBOW \& Skip-Gram with Negative Sampling} $|$
+\textit{Python, NumPy} \hfill \href{https://github.com/AStroCvijo/word2vec}{\textbf{GitHub}}
 \begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
-    \item Built a \textbf{RAG-based QA system for codebases} with configurable retrieval (top-k, chunk sizing) and support for multiple embedding backends (OpenAI, Hugging Face).
-    \item Improved \textbf{Recall@10 from 63.7\% to 88.8\%} through LLM-generated code summaries, enriched metadata, and embedding/chunking tuning.
-    \item Implemented an \textbf{agentic generation graph} with retrieval grading, query rewriting on failure, hallucination checking, and out-of-scope handling.
+    \item Implemented \textbf{CBOW and SGNS from scratch in pure NumPy} — no ML frameworks — with full training loop, negative sampling, sub-sampling of frequent words, and learning rate decay.
+    \item Evaluated on \textbf{Google analogy} (19k questions) and \textbf{WordSim-353}; best results: \textbf{44.2\% analogy accuracy} (CBOW) and \textbf{Spearman $\rho$ = 0.731} (SGNS) on text8.
+    \item Built an interactive \textbf{REPL for nearest-neighbour queries and vector arithmetic}, a \textbf{W\&B sweep} for hyperparameter search, pretrained embedding releases, and a \textbf{pytest test suite}.
 \end{itemize}
 
 \vspace{0.1cm}
@@ -94,6 +99,13 @@
 
 % ─────────────────────────────────────────────────────────────────
 \section*{Experience}
+
+\vspace{0.1cm}
+
+\textbf{\href{https://www.microsoft.com/}{Microsoft}} -- Applied Scientist \hfill Belgrade, Serbia (Hybrid) $|$ July 2026 -- Present
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+    \item Member of the \textbf{Applied Science team}, working on applied AI research and its deployment into production systems.
+\end{itemize}
 
 \vspace{0.1cm}
 
